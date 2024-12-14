@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package net.yorunina.tetrajs;
 
 import com.mojang.logging.LogUtils;

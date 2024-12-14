@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package net.yorunina.tetrajs.compat.tetra;
 
 import java.util.Collection;
@@ -12,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import se.mickelus.tetra.effect.ItemEffect;
+import se.mickelus.tetra.gui.stats.GuiStats;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class TetraEffect {
