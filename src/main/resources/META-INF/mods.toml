@@ -1,0 +1,21 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" #mandatory
+license="All rights reserved"
+[[mods]] #mandatory
+modId="tetrajs" #mandatory
+version="1.0" #mandatory
+displayName="TetraJS" #mandatory
+authors="Neha YoruNina" #optional
+description='''TetraJS'''
+[[dependencies.tetrajs]] #optional
+modId="forge" #mandatory
+mandatory=true #mandatory
+versionRange="[40.1,)" #mandatory
+ordering="NONE"
+side="BOTH"
+[[dependencies.tetrajs]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19,1.20)"
+ordering="NONE"
+side="BOTH"
