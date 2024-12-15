@@ -1,13 +1,12 @@
 package net.yorunina.tetrajs.compat.tetra;
 
-import java.util.Collection;
 import javax.annotation.Nullable;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.yorunina.tetrajs.model.ItemEffectResult;
 import se.mickelus.tetra.effect.ItemEffect;
-import se.mickelus.tetra.gui.stats.GuiStats;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class TetraEffect {
@@ -19,10 +18,25 @@ public class TetraEffect {
     }
 
     @Nullable
-    public static Collection<ItemEffect> getAllEffects(ItemStack stack) {
+    public static ItemEffect[] getAllItemEffects(ItemStack stack) {
         Item item = stack.getItem();
         if (item instanceof ModularItem modular) {
-            return modular.getEffects(stack);
+            return modular.getEffects(stack).toArray(ItemEffect[]::new);
+        } else {
+            return null;
+        }
+    }
+    @Nullable
+    public static ItemEffectResult[] getAllItemEffectResults(ItemStack stack) {
+        Item item = stack.getItem();
+        if (item instanceof ModularItem modular) {
+            return modular.getEffects(stack).stream().map(effect -> {
+                ItemEffectResult result = new ItemEffectResult();
+                result.itemEffect = effect;
+                result.level = modular.getEffectLevel(stack, effect);
+                result.item = stack;
+                return result;
+            }).toArray(ItemEffectResult[]::new);
         } else {
             return null;
         }
