@@ -30,7 +30,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 minecraft {
     mappings channel: 'official', version: "${mc_version}"
 
-//    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         client {
             workingDirectory project.file('run')
@@ -88,27 +87,15 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    maven {
-        url "https://maven.saps.dev/minecraft"
-        content {
-            includeGroup "dev.latvian.mods"
-        }
-    }
-    maven {
-        url "https://maven.architectury.dev"
-        content {
-            includeGroup "dev.architectury"
-        }
-    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-    implementation fg.deobf("dev.architectury:architectury-forge:${rootProject.architectury_version}")
-    implementation fg.deobf("dev.latvian.mods:kubejs-forge:${rootProject.kubejs_version}")
-    implementation fg.deobf("dev.latvian.mods:rhino-forge:${rootProject.rhino_version}")
-    implementation fg.deobf("curse.maven:tetra-289712:4448541")
-    implementation fg.deobf("curse.maven:mutil-351914:3941314")
+    implementation fg.deobf("curse.maven:architectury-forge-419699:5137938")
+    implementation fg.deobf("curse.maven:rhino-416294:4944325")
+    implementation fg.deobf("curse.maven:kubejs-forge-238086:5268032")
+    implementation fg.deobf("curse.maven:tetra-289712:5957838")
+    implementation fg.deobf("curse.maven:mutil-351914:4824501")
 }
 
 

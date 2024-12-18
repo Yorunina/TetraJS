@@ -65,9 +65,6 @@ public class TetraStatGetter {
     public static IStatGetter createStatGetterStability() {
         return new StatGetterStability();
     }
-    public static IStatGetter createStatGetterSum(double offset, IStatGetter... statGetters) {
-        return new StatGetterSum(offset, statGetters);
-    }
     public static IStatGetter createStatGetterSweepingRange() {
         return new StatGetterSweepingRange();
     }
