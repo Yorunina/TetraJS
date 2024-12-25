@@ -1,5 +1,7 @@
 package net.yorunina.tetrajs.compat.tetra;
 
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import se.mickelus.tetra.blocks.workbench.gui.WorkbenchStatsGui;
 import se.mickelus.tetra.gui.stats.bar.GuiStatBar;
 import se.mickelus.tetra.gui.stats.getter.ILabelGetter;
@@ -7,6 +9,7 @@ import se.mickelus.tetra.gui.stats.getter.IStatGetter;
 import se.mickelus.tetra.gui.stats.getter.ITooltipGetter;
 import se.mickelus.tetra.items.modular.impl.holo.gui.craft.HoloStatsGui;
 
+@OnlyIn(Dist.CLIENT)
 public class TetraGui {
     public TetraGui() {
     }
