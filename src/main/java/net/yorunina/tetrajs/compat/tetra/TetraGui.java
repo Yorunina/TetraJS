@@ -20,6 +20,6 @@ public class TetraGui {
     }
 
     public static GuiStatBar createGuiStatBar(int x, int y, int barLength, String labelKey, double min, double max, boolean segmented, boolean split, boolean inverted, IStatGetter statGetter, ILabelGetter labelGetter, ITooltipGetter tooltipGetter) {
-        return new GuiStatBar(x, y, barLength, labelKey, min, max, segmented, false, false, statGetter, labelGetter, tooltipGetter);
+        return new GuiStatBar(x, y, barLength, labelKey, min, max, segmented, split, inverted, statGetter, labelGetter, tooltipGetter);
     }
 }
